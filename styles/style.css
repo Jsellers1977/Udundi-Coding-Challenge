@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Lato";
+    src: url('698242188-Lato-Bla.eot');
+    src: url('698242188-Lato-Bla.eot?#iefix') format('embedded-opentype'),
+    url('698242188-Lato-Bla.svg#Lato Black') format('svg'),
+    url('698242188-Lato-Bla.woff') format('woff'),
+    url('698242188-Lato-Bla.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GFSDidot';
+    src: local('GFSDidot Display Bold'), local('GFSDidot-Display-Bold'),
+        url('/fonts/GFSDidotBold.woff2') format('woff2'),
+        url('/fonts/GFSDidotBold.woff') format('woff'),
+        url('/fonts/GFSDidotBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --clr-bg-primary: #611818;
+    --clr-bg-secondary: #ffffff;
+    --clr-hover: #8f2323;
+    --clr-f-primary: #ffffff;
+    --clr-f-secondary: #eeeeee;
+    --ff-primary: 'Essonnes';
+    --ff-secondary: 'Arial';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*  ---------- Background ----------  */
+.background {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    flex: 35%;
+    background-color: var(--clr-bg-primary);
+}
+
+.background-image {
+    flex: 65%;
+    background-color: var(--clr-bg-primary);
+    background-image: url('../img/johannes-plenio-RwHv7LgeC7s-unsplash-compressed.jpg');
+    background-size: cover;
+    background-position: right top;
+}
+
+/*  ---------- Heading ----------  */
+.title-section {
+    top: 30%;
+    left: 20%;
+    position: absolute;
+    overflow-y: unset;
+    overflow-x: unset;
+}
+
+.explore-title {
+    font-family: 'GFSDidot';
+    color: var(--clr-f-primary);
+    font-size: clamp(5rem, 15vw, 15rem);
+}
+
+.explore-description {
+    position: absolute;
+    top: 82%;
+
+    margin-left: 9%;
+}
+
+.more-details-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-f-primary);
+}
+
+.more-details-button-image {
+    margin-right: 20px;
+}
+
+.more-details-button-text {
+    font-size: 25px;
+    font-family: Lato;
+    
+}
+
+.explore-description:hover {
+    opacity: .65;
+}
+
+/*  ---------- Card ----------  */
+
+.modal-card {
+    position: absolute;
+    bottom: calc(100vh - 90%);
+    left: calc(100vw - 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px;
+
+    max-width: 580px;
+    max-height: 702px;
+
+    width: 90%;
+	height: fit-content;
+    opacity: 1;
+    background-color: var(--clr-bg-secondary);
+    box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.3);
+    animation: slide-up 1.4s ease;
+}
+.modal-card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-card-title {
+    /* font-size: 66px; */
+    font-size: clamp(15px, 10vw, 66px);
+    color: var(--clr-bg-primary);
+    letter-spacing: 1.65px;
+}
+
+.modal-card-title-underline {
+    margin: 20px 0;
+    background-image: linear-gradient(90deg, #611818 0%, #ffffff 100%);
+    width: 65%;
+    height: 1.7px;
+}
+
+.modal-card-content {
+    font-family: var(--ff-secondary);
+    font-size: 15px;
+    color: #505050;
+    letter-spacing: 0.35px;
+    line-height: 30px;
+}
+
+.modal-card-button {
+    margin: 20px 0;
+    width: 235px;
+    height: 55px;
+    background-image: linear-gradient(90deg, #611818 0%, #a36754 100%);
+    border: 1px solid #979797;
+    font-family: ArialMT;
+    font-size: 18px;
+    color: var(--clr-f-primary);
+    letter-spacing: 1.69px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.modal-card-button:hover {
+    background-image: linear-gradient(90deg, #8f2323 0%, #a36754 100%);
+}
+
+.modal-card-close {
+    top: 3%;
+    right: 5%;
+    font-size: 25px;
+    font-weight: 300;
+    position: absolute;
+    color: var(--clr-bg-primary);
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.modal-card-close:hover {
+    color: var(--clr-hover);
+}
+
+
+/*  ---------- Social media ----------  */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+
+.social-media-card {
+    margin: 5px;
+    filter: drop-shadow(0px 0px 5px #000000);
+}
+
+.social-media-card:hover {
+    opacity: .65;
+}
+/*  ---------- Slide up animation ----------  */
+@keyframes slide-up {
+    0% {
+    transform: translatey(250px);
+}
+ 100% {
+     transform: translatey(0);
+}
+}

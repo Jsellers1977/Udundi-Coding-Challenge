@@ -1,0 +1,38 @@
+/*  ---------- Background ----------  */
+.background {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    flex: 0 0 10em;
+}
+
+/*  ---------- Title Section ----------  */
+.title-section {
+    top: 50%;
+    overflow-y: unset;
+    overflow-x: unset;
+}
+
+.explore-description {
+    margin-top: 30px;
+}
+
+/*  ---------- Card ----------  */
+.modal-card {
+    padding: 20px;
+    overflow-y: scroll;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*  ---------- Social media ----------  */
+.social-media {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    left: calc(100vw - 65%);
+}

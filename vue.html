@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./css/animation.css" />
+        <link rel="stylesheet" media="screen and (max-width: 1080px)" href="./styles/mobile.css/" />
+
+        </head>
+    <body>
+        <main>
+            <div id="app">
+                <html-comp />
+              </div>
+        </main>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            Vue.component('html-comp', {
+        template: `
+        <!-- ---------- Background ---------- -->
+        <div class="background">
+            <div class="sidebar"></div>
+            <div class="background-image  animate__animated animate__fadeIn"></div>
+        </div>
+    
+        <!-- ---------- Title Section ---------- -->
+        <div class="title-section animate__animated animate__fadeInLeftBig">
+            <h2 class="explore-title">Explorer</h2>
+            <div class="explore-description">
+                <button class="more-details-button" id="more">
+                    <img
+                        class="more-details-button-image"
+                        src="./img/plus.svg"
+                        alt="an image of plus icon that opens more details in a popup modal"
+                    />
+                    <p class="more-details-button-text">More Details</p>
+                </button>
+            </div>
+        </div>
+    
+        <!-- ---------- Card ---------- -->
+        <div class="modal-card animate__animated animate__faster">
+            <div class="modal-card__heading">
+                <h3 class="modal-card-title">Explorer</h3>
+                <div class="modal-card-title-underline"></div>
+            </div>
+            <p class="modal-card-content">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                consequatur?
+            </p>
+            <button
+                class="modal-card-button"
+                target="__blank"
+                onclick=" window.open('#');"
+            >
+                Read more
+            </button>
+            <button class="modal-card-close" id="close">X</button>
+        </div>
+    
+        <!-- ---------- Social Media ---------- -->
+        <div class="social-media animate__animated animate__fadeInUpBig">
+            <a href="https://www.facebook.com" target="__blank" title="facebook">
+                <img
+                    class="social-media__card"
+                    src="./img/facebook.svg"
+                    alt="an image of facebook"
+                />
+            </a>
+    
+            <a href="https://www.instagram.com" target="__blank" title="instagram">
+                <img
+                    class="social-media__card"
+                    src="./img/instagram.svg"
+                    alt="an image of instagram"
+                />
+            </a>
+        </div>
+      `
+      });
+      new Vue({
+        el: '#app'
+      })
+        </script>
+    </body>
+</html>
